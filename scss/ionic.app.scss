@@ -1,0 +1,477 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+/* Empty. Add your own CSS if you like */
+@import "../scss/font-face.app";
+
+
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+body { font-family: sans-serif; }
+
+.masonry {
+  background: #EEE;
+  max-width: 640px;
+}
+h3.popup-title {
+ font-family: 'ralewayheavy';
+ font-size: 1.3em;
+}
+
+.popup-body {
+  padding: 15px;
+  overflow: auto;
+  text-align: center;
+  font-family: 'ralewayregular';
+}
+
+.button.button-positive {
+  border-color: RGBA(249, 90, 91, 1);
+  background-color: RGBA(249, 90, 91, 1);
+  color: #fff;
+  font-family: 'ralewayheavy';
+    font-size: 1.5em;
+    line-height: 1.6em;
+}
+.button-positive.activated {
+  color: #fff;
+  border: none;
+  background-color: RGBA(249, 90, 91, 0.3) !important;    
+}
+
+.button.button-default {
+  border-color: RGBA(249, 90, 91, 1);
+  background-color: RGBA(249, 90, 91, 1);
+  color: #fff;
+  font-family: 'ralewayheavy';
+    font-size: 1.5em;
+    line-height: 1.6em;
+    text-transform:uppercase;
+}
+.button-default.activated {
+  color: #fff;
+  border: none;
+  background-color: RGBA(249, 90, 91, 0.3) !important;    
+}
+.masonry .mas {
+  width:  60px;
+  height: 60px;
+  float: left;
+  background: #D26;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+}
+
+.mas.w2 { width:  120px; }
+.mas.w3 { width:  180px; }
+.mas.w4 { width:  240px; }
+
+.mas.h2 { height: 100px; }
+.mas.h3 { height: 130px; }
+.mas.h4 { height: 180px; }
+
+
+
+
+ion-side-menus.view {
+background-color: transparent!important;
+}
+ion-side-menus.view.viewZero {
+background-color: transparent!important;
+width:0px;
+height:0px;
+}
+
+h1.title.title-don {
+    font-family: 'ralewayheavy';
+    color: white;
+    font-size:2.4em;
+    text-transform: uppercase;
+    .and41 & {
+      font-size: 2.2em;
+        left: 0px;
+        line-height: 1.7em;
+        margin: 0px;
+        right: 0px;
+    }
+}
+
+
+.bar-don {
+    background-color: RGBA(255, 255, 255, 0);
+    color: white;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+button.ico-ref {
+    width: 23px;
+    margin-left:10px !important;
+    border: none;
+    background: none;
+    margin:0 auto;
+    background: url(../img/icon/icon-ref.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  &.active,
+  &.activated {
+      opacity:0.3;
+  }
+}
+
+
+
+
+
+.flip-icon {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
+margin-top:10px;
+}
+.bar {
+background:none;
+}
+/* Favorites */
+
+.favorites-view {
+ background-color: RGBA(49, 48, 46, 1);
+}
+.design-red .favorites-view {
+background-color: #E4544F;
+}
+@import "../scss/menu.app";
+@import "../scss/language.app";
+@import "../scss/about-feedback-unete.app";
+@import "../scss/questions.app";
+@import "../scss/restaurants.app";
+@import "../scss/restaurant.app";
+@import "../scss/vendor/scroll/mobiscroll.animation";
+@import "../scss/vendor/scroll/mobiscroll.scroller";
+@import "../scss/vendor/scroll/mobiscroll.scroller.ios";
+@import "../scss/vendor/scroll/mobiscroll";
+
+// RGBA(194, 187, 164, 1) - braz
+// RGBA(103, 111, 175, 1) - niebieski
+// RGBA(65, 64, 60, 1) - braz
+// RGBA(0, 0, 0, 1) - black
+// RGBA(96, 96, 96, 1) - favoritos gray
+// RGBA(174, 127, 214, 1) - UNÉTE fiolet
+// RGBA(255, 78, 79, 1) - nosostros red
+// RGBA(127, 216, 92, 1) - green feedback
+
+#map {
+  width: 100%;
+  height: 97%;
+    z-index: -1;
+}
+
+
+h1.title.location-don {
+font-family: 'ralewayheavy';
+  color: black;
+  font-size: 2em;
+  line-height: 2.2em;
+  text-transform: uppercase;
+}
+
+.location {
+    background-color: transparent;
+    color: black;
+    z-index: 999;
+}
+
+.footer-location {
+    z-index: 999;
+    background: RGBA(144, 217, 232, 1);
+    height: 75px;
+    padding: 2px;
+    padding-top:8px;
+    padding-left: 8px;
+}
+
+.design-red .footer-location {
+    background: #E4544F;
+    color:white !important;
+    height: 130px;
+}
+
+.design-red .title-location {
+    color: white;
+    font-size: 1.5em;
+    font-family: 'ralewayheavy';
+    margin:0 auto;
+    line-height: 1.2em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.design-red .and41 .title-location {
+    color: white;
+    font-size: 1.2em;
+    font-family: 'ralewayheavy';
+    margin:0 auto;
+    line-height: 1em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.design-red .row.row-title-location {
+    padding-top: 0px;
+    height: 3em;
+    margin-top:0px !important;
+    padding-bottom: 10px;
+}
+
+.design-red .row.row-title-location-bottom{
+    margin-top:0px !important;
+    padding:0;
+}
+
+.row.row-location {
+    padding-bottom: 10px;
+    padding-top: 0px;
+    padding-left: 3px;
+    padding-right: 0px;
+}
+
+.slide-box-location .slider-pager {
+    top: initial;
+    display: inline;
+    position: absolute;
+    line-height: 20px !important;
+    width: 120px !important; 
+    bottom: 0;
+    margin: 0 auto !important;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    transform: scale(0.6);
+    -webkit-transform: scale(0.6);
+    z-index: 2000;
+}
+
+a.item-content {
+ background: none !important;
+}
+.design-red .slide-box-location .slider-pager-page {
+ color: white !important;
+}
+.col-description {
+ border-right-color: RGBA(0,0,0, 0.2);
+ border-right-width: 1px;
+ border-right-style: solid;
+ font-family: 'ralewayregular';
+ font-size: .95em;
+ line-height: .95em;
+ 
+}
+
+.design-red .col-description {
+ border-right-color: RGBA(255,255,255, 0.5);
+}
+
+.gradient-white {
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+    
+  padding-left: auto;
+  padding-right: auto;
+  padding-top: 15px;   
+}
+
+.col-mts {
+ font-family: 'ralewayheavy';
+ margin: 3% auto;
+ text-align: center;
+ vertical-align: center;
+    
+}
+
+.backdrop {
+ background-color: RGBA(0, 0, 0, 0.6);
+}
+
+.location-number-mts {
+font-size: 1.4em;
+}
+
+.location-mts {
+font-size: 0.6em;
+}
+
+
+.fade-in {
+  -webkit-transform: scale(0.0);
+  transform: scale(0.0);
+  opacity: 0;
+}
+.fade-in.ng-enter, .fade-in > .ng-enter {
+  -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 200ms;
+  transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 200ms;
+}
+.fade-in.ng-enter-active,
+.fade-in > .ng-enter-active {
+  -webkit-transform: scale(1.0);
+  transform: scale(1.0);
+  opacity: 1;
+}
+
+.fade-in.ng-leave, .fade-in > .ng-leave {
+  -webkit-transition: all ease-in-out 200ms;
+  transition: all ease-in-out 200ms;
+}
+
+.modal-backdrop {
+height: 100%;
+background-color: rgba(0,0,0,0.6);
+z-index: 10;
+}
+
+.sharing {
+background: RGBA(228, 84, 79, 1);
+
+}
+
+.sharing-modal {
+border-radius: 4px;
+}
+
+button.sharing-btn {
+  height: 64px;
+width: 64px;
+  border:none;
+      background-color: RGBA(228, 84, 79, 0);
+text-align: center;
+    padding: 0px;
+  &.active,
+  &.activated {
+       background-color: white;
+       border-radius: 20px;
+       opacity:0.3;
+  }
+}
+
+
+
+.ico-fb-btn {
+  background-image: url("../img/icon/ico-fb.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+
+}
+
+
+.ico-me-btn {
+   background-image: url("../img/icon/ico-me.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;  
+
+}
+
+.ico-message-btn {
+   background-image: url("../img/icon/ico-message.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;  
+
+}
+
+.ico-twitter-btn {
+     background-image: url("../img/icon/ico-twitter.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+
+}
+
+.ico-whatsapp-btn {
+     background-image: url("../img/icon/ico-whatsapp.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+    background-color: none;
+}
+
+.col-30 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 30%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+
+.sharing-text {
+    color: white;
+    font-family: 'raleway-regular';
+    font-size: 1.2em;
+    line-height: 1.4em;
+    text-transform: uppercase;
+}
+
+.sharing-textarea{ 
+  height: 90px;
+  color: RGBA(220, 220, 220, 1);
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 1.5em;
+    font-family: 'ralewayregular';
+    padding:10px;
+    margin-left:10px;
+    margin-right: 10px;
+    
+}
+
+
+.design-red .sharing-textarea{
+ background-color: #E3544F;    
+ color:white !important;    
+ border: solid 1px white;
+}

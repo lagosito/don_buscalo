@@ -1,0 +1,341 @@
+/* Restaurants */
+
+.container-rest {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.flex-rest {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+}
+.wrapper {
+    z-index: -1;
+    margin: 0 auto;
+    position: relative;
+    .and41 & {
+        width: 100% !important;
+    }
+}
+.columns {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 10px;
+    -webkit-column-fill: auto;
+    -moz-column-count: 2;
+    -moz-column-gap: 10px;
+    -moz-column-fill: auto;
+    column-count: 2;
+    column-gap: 15px;
+    column-fill: auto;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: -20px;
+    .and41 & {}
+}
+.columns-advert {
+    -webkit-column-count: 1;
+    -webkit-column-gap: 10px;
+    -webkit-column-fill: auto;
+    -moz-column-count: 1;
+    -moz-column-gap: 10px;
+    -moz-column-fill: auto;
+    column-count: 1;
+    column-gap: 15px;
+    column-fill: auto;
+    width: 95%;
+    margin: 0 auto;
+    .and41 & {}
+}
+.pin {
+    display: inline-block;
+    margin: 0 0 15px;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+    opacity: 1;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    background: none;
+    border: none;
+    .and41 & {} &.active, &.activated {
+        opacity: 0.3;
+    }
+}
+.img-rest {
+    border: none;
+    width: 100%;
+    vertical-align: middle;
+    background-color: RGBA(255, 255, 255, 0.1);
+}
+.img-rest-hg {
+    height: 8.3em !important;
+    width: 100% !important;
+    background-color: RGBA(255, 255, 255, 0.1);
+}
+
+.img-bg {
+    //background-image: url('../img/icon/ico-moustache-small.png');
+    //background-repeat: no-repeat;
+    //background-color: white;
+    //background-size: auto;
+    //background-position: center;
+}
+    
+.item-restaurant {
+    border: none;
+    background-color: RGBA(199, 142, 92, 1);
+    margin: 0;
+    font-family: 'ralewayheavy';
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.4em;
+    line-height: 1.2em;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 3px;
+    padding-right: 3px;
+    width: 100%;
+    text-align: center;
+}
+.design-red .item-restaurant {
+    font-family: 'ralewaymedium';
+    font-size: 1.1em;
+}
+.menu-hr.mts-hr {
+    width: 40%;
+}
+.advertising-item {
+    border: none;
+    background-color: RGBA(75, 75, 75, 1);
+    margin: 0;
+    text-transform: uppercase;
+    color: white;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-left: 3px;
+    padding-right: 3px;
+    width: 100%;
+    text-align: center;
+}
+.design-red .advertising-item {
+    border: 1px white solid;
+    background: none;
+}
+.advertising-title {
+    font-family: 'ralewayheavy';
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+.design-red .advertising-title {
+    font-family: 'ralewaymedium';
+    font-size: 1.2em;
+    line-height: 1.2em;
+    margin-left:2px;
+    margin-right:2px;
+    margin-bottom:5px;
+}
+.advertising-description {
+    font-family: 'ralewayregular';
+    font-size: 0.90em;
+    line-height: 1em;
+}
+.advertising-yel {
+    color: yellow;
+    font-size: 0.8em;
+    font-family: 'ralewayregular';
+}
+.item-and {
+    .and41 & {
+        margin-left: 15px !important;
+        margin-right: 5px !important;
+        width: 100%;
+        font-size: 1em;
+        text-align: center;
+    }
+}
+.item-yel {
+    color: RGBA(254, 255, 5, 1);
+}
+.restaurants-bar {
+    height: 62px;
+    background-color: RGBA(49, 48, 46, 1);
+    border: none;
+    padding: 0;
+    background-image: none;
+    margin-top: 9px;
+}
+.design-red .restaurants-bar {
+    background-color: #E4544F;
+}
+.platform-ios .restaurants-bar {
+    height: 62px;
+    background-color: RGBA(49, 48, 46, 1);
+    border: none;
+    padding: 0;
+    background-image: none;
+    margin-top: 0px;
+}
+.platform-ios.design-red .restaurants-bar {
+    background-color: #E4544F;
+}
+.favorites-bar {
+    height: 62px;
+    border: none;
+    padding: 0;
+    background-image: none;
+    margin-top: 9px;
+}
+.platform-ios .favorites-bar {
+    height: 62px;
+    border: none;
+    padding: 0;
+    background-image: none;
+    margin-top: 0px;
+}
+.favorites-title {
+    font-size: 1.8em !important;
+    line-height: 60px !important;
+}
+
+.favorites-title.terms-title {
+    font-size: 1.7em !important;
+    left: 45px !important;
+}
+
+.favorites-title.terms-esp-title {
+    font-size: 1.36em !important;
+    left: 45px !important;
+    right: 0px !important;
+}
+.header-res {
+    border: none;
+    height: 60px;
+    z-index: 999;
+}
+.scroll-view {
+    //display:inline;
+
+}
+.scroll-content {
+    width: 100% !important;
+    height: 100% !important;
+}
+.scroll {
+    vertical-align: middle;
+    text-align: center;
+}
+ion-scroll[direction=x] {
+    width: 100vw;
+}
+ion-scroll[direction=y] {
+    height: 100vh;
+}
+.dolar-row {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0;
+}
+.dolar {
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.span-dolar {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+    font-size: 1.5em;
+    text-align: center;
+}
+.dolar1 {
+    background-color: RGBA(201, 199, 197, 1);
+}
+.design-red .dolar1 {
+    background-color: #646361;
+}
+.dolar2 {
+    background-color: RGBA(103, 99, 98, 1);
+}
+.design-red .dolar2 {
+    background-color: #434142;
+}
+.dolar3 {
+    background-color: RGBA(205, 152, 102, 1);
+}
+.design-red .dolar3 {
+    background-color: #030303;
+}
+.dolar4 {
+    background-color: RGBA(205, 152, 102, 1);
+}
+.design-red .dolar4 {} .button-dolar {
+    margin: 0 auto;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    font-family: 'ralewayheavy';
+    color: white;
+}
+
+.design-red .dolar3opacity {
+opacity: 0.4;
+}
+
+.design-red .dolar2opacity {
+opacity: 0.4;
+}
+
+.design-red  .dolar1opacity {
+opacity: 0.4;
+}
+.button-dolar:enabled:active {
+    opacity: 0.3;
+}
+.button-dolar:disabled {
+    opacity: 0.2;
+}
+
+
+.clickable-rest {
+}

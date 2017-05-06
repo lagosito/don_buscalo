@@ -1,0 +1,5 @@
+storeFile=/path-to/app.keystore
+storeType=jks
+keyAlias=aliasname
+keyPassword=aliaspass
+storePassword=password

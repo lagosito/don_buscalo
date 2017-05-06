@@ -1,0 +1,11 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/ak/Projekty/donBuscalo/www/other/bet/js/controllers/chargepoint/add/step2.js",
+        "/Users/ak/Projekty/donBuscalo/www/other/sm/js/controllers.js",
+        "/Users/ak/Projekty/donBuscalo/www/js/app.js",
+        "/Users/ak/Projekty/donBuscalo/www/zother/buzz/js/ionic/ng-cordova.min.js",
+        "/Users/ak/Projekty/donBuscalo/www/zother/buzz/js/gestures.js",
+        "/Users/ak/Projekty/donBuscalo/www/js/services.js",
+        "/Users/ak/Projekty/donBuscalo/www/zother/sm/js/helpers.js"
+    ]
+}

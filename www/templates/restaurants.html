@@ -1,0 +1,179 @@
+<ion-view animation="slide-left-right" class="favorites-view {{versionClass}}">
+    <ion-header-bar align-title="center" class="menu-bar favorites-view header-res">
+        <div id="hamburger" class="hamburglar {{isOpen}}" ng-click="open()">
+
+            <div class="burger-icon">
+                <div class="burger-container">
+                    <span class="burger-bun-top"></span>
+                    <span class="burger-filling"></span>
+                    <span class="burger-bun-bot"></span>
+                </div>
+            </div>
+
+
+            <div class="path-burger">
+                <div class="animate-path">
+                </div>
+            </div>
+        </div>
+        <h1 class="title title-don favorites-title">{{'results' | translate}}</h1>
+        <div class="buttons">
+            <button class="button button-icon ion-ios-location-outline white" ng-click="goLocationRestaurants()">
+
+            </button>
+        </div>
+
+
+
+    </ion-header-bar>
+
+    <ion-header-bar class="bar-subheader restaurants-bar">
+        <hr class="menu-hr">
+        <div class="row row-center center dolar-row">
+            <fieldset class="col-33" style="width:33% !important; " >
+                <button class="dolar dolar1 button-dolar" ng-class="isDisabled1" ng-click="priceRange(1)"  style="width:100% !important;" ><span class="span-dolar">$</span>
+                </button>
+            </fieldset>
+            <fieldset class="col-33" style="width:33% !important;"  >
+                <button class=" dolar dolar2 button-dolar " ng-class="isDisabled2" ng-click="priceRange(2)"  style="width:100% !important;" ><span class="span-dolar">$$</span>
+                </button>
+            </fieldset>
+            <fieldset class="col-33" style="width:33% !important; " >
+                <button class="dolar dolar3 button-dolar" ng-class="isDisabled3" ng-click="priceRange(3)" style="width:100% !important; "><span class="span-dolar">$$$</span>
+                </button>
+            </fieldset>
+        </div>
+    </ion-header-bar>
+    <ion-content on-swipe-left="onSwipeNext()" on-swipe-right="onSwipePrevious()" style="margin-top:9px; height:100%; " has-header="true">
+        <br />
+        <div class="wrapper">
+            <!-- alternative: image-lazy-src or ng-src -->
+            <!-- alternative: <img img-cache -->
+            <div class="columns">
+                <div bindonce ng-repeat="rest in evenRestaurants | filter:myFilter | orderBy:'mts' | limitTo:toIndex">
+
+                    <div ng-if="rest.name !== 'advertising50' && rest.name !== 'advertising100'" class="pin" style="width: 100%; margin-left: 0px; padding: 0px; ">
+                        <div id="clickable-rest-{{rest.objectId}}" ng-click="goRestaurant(rest.objectId)">
+                            <div class="item-image img-rest img-bg" style="height: 8.3em; width:100%;">
+                                <img class="img-rest-hg"  img-cache ng-src="{{rest.imageThumbnail.url}}" border="0" />
+                            </div>
+                            <div class="item-restaurant dolar{{rest.priceRange}}">
+                                <div>{{rest.name}}</div>
+                                <hr  class="menu-hr mts-hr">
+                                <div><div class="text-center ionic_ratings">
+      <span class="icon_restaurants fa fa-star-o ionic_rating_icon_off read_only" ng-show="rest.rating < 1" ></span>
+      <span class="icon_restaurants fa fa-star ionic_rating_icon_on read_only"  ng-show="rest.rating > 0" ></span>
+      <span class="icon_restaurants fa fa-star-o ionic_rating_icon_off read_only"  ng-show="rest.rating < 2" ></span>
+      <span class="icon_restaurants fa fa-star ionic_rating_icon_on read_only"   ng-show="rest.rating > 1" ></span>
+      <span class="icon_restaurants fa fa-star-o ionic_rating_icon_off read_only"  ng-show="rest.rating < 3" ></span>
+      <span class="icon_restaurants fa fa-star ionic_rating_icon_on read_only"  ng-show="rest.rating > 2" ></span>
+      <span class="icon_restaurants fa fa-star-o ionic_rating_icon_off read_only" ng-show="rest.rating < 4" ></span>
+      <span class="icon_restaurants fa fa-star ionic_rating_icon_on read_only" ng-show="rest.rating > 3" ></span>
+      <span class="icon_restaurants fa fa-star-o ionic_rating_icon_off read_only"  ng-show="rest.rating < 5" ></span>
+      <span class="icon_restaurants fa fa-star ionic_rating_icon_on read_only" ng-show="rest.rating > 4"></span>
+      </div></div>
+                                <span ng-if="rest.mts" class="item-yel">{{rest.mts}} km</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div ng-if="rest.name === 'advertising50' || rest.name === 'advertising100'" class="pin" style="width: 100%; margin-left: 0px; padding: 0px; " bindonce>
+                        <div ng-click="GotoAds(rest.link)">
+                        <div ng-if="rest.image" class="item-image img-rest img-bg" style="height: 8.3em; width:100%; margin-bottom:-3px;">
+                            <img img-cache ng-src="{{rest.image.url}}" border="0" class="img-rest-hg" />
+                        </div>
+                        <div ng-if="rest.descriptionEn" class="advertising-item">
+                            <div ng-if="rest.titleEn && trEn" class="advertising-title">{{rest.titleEn}}</div>
+                            <div ng-if="rest.titleEsp && !trEn" class="advertising-title">{{rest.titleEsp}}</div>
+                            <div ng-if="rest.descriptionEn && trEn" class="advertising-description">{{rest.descriptionEn}}</div>
+                            <div ng-if="rest.descriptionEsp && !trEn" class="advertising-description">{{rest.descriptionEsp}}</div>
+                            <span ng-if="rest.coupon" class="advertising-yel">{{rest.coupon}}</span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div bindonce ng-repeat="rest in oddRestaurants | filter:myFilter | orderBy:'mts' | limitTo:toIndex track by rest.objectId ">
+
+                    <div ng-if="rest.name !== 'advertising50' && rest.name !== 'advertising100'" class="pin" style="width: 100%; margin-left: 0px; padding: 0px; ">
+                        <div id="clickable-rest-{{rest.objectId}}" ng-click="goRestaurant(rest.objectId)">
+                            <div class="item-image img-rest img-bg" style="height: 8.3em; width:100%;">
+                                <img img-cache ng-src="{{rest.imageThumbnail.url}}" border="0" class="img-rest-hg" />
+                            </div>
+                            <div class="item-restaurant dolar{{rest.priceRange}}">
+                                <div>{{rest.name}}</div>
+                                <hr class="menu-hr mts-hr">
+                                <div><div><div class="text-center ionic_ratings">
+      <span class="icon_restaurants fa fa-star-o ionic_rating_icon_off read_only" ng-show="rest.rating < 1" ></span>
+      <span class="icon_restaurants fa fa-star ionic_rating_icon_on read_only"  ng-show="rest.rating > 0" ></span>
+      <span class="icon_restaurants fa fa-star-o ionic_rating_icon_off read_only"  ng-show="rest.rating < 2" ></span>
+      <span class="icon_restaurants fa fa-star ionic_rating_icon_on read_only"   ng-show="rest.rating > 1" ></span>
+      <span class="icon_restaurants fa fa-star-o ionic_rating_icon_off read_only"  ng-show="rest.rating < 3" ></span>
+      <span class="icon_restaurants fa fa-star ionic_rating_icon_on read_only"  ng-show="rest.rating > 2" ></span>
+      <span class="icon_restaurants fa fa-star-o ionic_rating_icon_off read_only" ng-show="rest.rating < 4" ></span>
+      <span class="icon_restaurants fa fa-star ionic_rating_icon_on read_only" ng-show="rest.rating > 3" ></span>
+      <span class="icon_restaurants fa fa-star-o ionic_rating_icon_off read_only"  ng-show="rest.rating < 5" ></span>
+      <span class="icon_restaurants fa fa-star ionic_rating_icon_on read_only" ng-show="rest.rating > 4"></span>
+      </div></div>
+                                <span ng-if="rest.mts" class="item-yel">{{rest.mts}} km</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div ng-if="rest.name === 'advertising50' || rest.name === 'advertising100'" class="pin" style="width: 100%; margin-left: 0px; padding: 0px; " bindonce>
+                        <div ng-click="GotoAds(rest.link)">
+                        <div ng-if="rest.image" class="item-image img-rest img-bg" style="height: 8.3em; width:100%; margin-bottom:-3px;">
+                            <img  img-cache ng-src="{{rest.image.url}}" border="0" class="img-rest-hg" />
+                        </div>
+                        <div ng-if="rest.descriptionEn" class="advertising-item">
+                            <div ng-if="rest.titleEn && trEn" class="advertising-title">{{rest.titleEn}}</div>
+                            <div ng-if="rest.titleEsp && !trEn" class="advertising-title">{{rest.titleEsp}}</div>
+                            <div ng-if="rest.descriptionEn && trEn" class="advertising-description">{{rest.descriptionEn}}</div>
+                            <div ng-if="rest.descriptionEsp && !trEn" class="advertising-description">{{rest.descriptionEsp}}</div>
+                            <span ng-if="rest.coupon" class="advertising-yel">{{rest.coupon}}</span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="columns-advert"> <div class="pin" style="width: 100%; margin-left: 0px; padding: 0px; ">
+            <div class="advertising-item"> 
+                        <div class="advertising-title">Advertising</div>
+                        <div class="advertising-description">Lorem Ipsum Dolor Sit</div> 
+                        <span class="advertising-yel">coupon</span>
+                </div></div>
+            </div> -->
+            <ion-infinite-scroll on-infinite="loadMore()" icon="none" distance="0%">
+            </ion-infinite-scroll>
+            <!-- <div class="pin" style="width: 100%; margin-left: 0px; padding: 0px; " bindonce ng-repeat="rest in evenRestaurants | filter:myFilter | orderBy:'mts' | limitTo: limitRestaurants"><div class="clickable-rest"  ng-click="goRestaurant(rest.objectId)">
+                    <div class="item-image img-rest"><img img-cache ng-src="{{rest.imageThumbnail.url}}" />
+                    </div>
+                    <div class="item-restaurant dolar{{rest.priceRange}}" >
+                        <div>{{rest.name}}</div> 
+                        
+                        <span class="item-yel">{{rest.mts}} km</span>
+                    </div>
+                    </div>
+                </div> -->
+            <!--
+                <div class="item"  bindonce ng-repeat="rest in restaurants | filter:myFilter | orderBy:'mts'">
+                    <div class="clickable-rest" ng-click="goRestaurant(rest.objectId)">
+                        <div class="item-image img-rest"><img img-cache ng-src="{{rest.imageThumbnail.url}}" alt="A masonry brick" />
+                    </div>
+                    <div class="item-restaurant dolar{{rest.priceRange}}" >
+                        <div>{{rest.name}}</div> 
+                        
+                        <span class="item-yel">{{rest.mts}} km</span>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+-->
+
+
+            <div style="height: 150px;"></div>
+        </div>
+    </ion-content>
+
+</ion-view>

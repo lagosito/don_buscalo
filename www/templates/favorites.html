@@ -1,0 +1,65 @@
+<!--<ion-side-menus class="viewZero"  >
+</ion-side-menus> -->
+<ion-view view-title="{{'favorites' | translate}}" class=" favorites-view {{versionClass}}">
+<ion-header-bar align-title="center" class="menu-bar favorites-view header-res" >
+  <div id="hamburger" class="hamburglar {{isOpen}}" ng-click="open()" >
+
+            <div class="burger-icon">
+                <div class="burger-container">
+                    <span class="burger-bun-top"></span>
+                    <span class="burger-filling"></span>
+                    <span class="burger-bun-bot"></span>
+                </div>
+            </div>
+
+           
+            <div class="path-burger">
+                <div class="animate-path">
+                </div>
+            </div>
+        </div>
+  <h1 class="title title-don favorites-title">{{'favorites' | translate}}</h1>
+<div class="buttons">
+    <button class="button button-icon ion-ios-location-outline white"  ng-click="goLocationFavourites()">
+    </button></div>
+</ion-header-bar>
+<ion-header-bar class="favorites-view bar-subheader favorites-bar ">
+        <hr class="menu-hr">
+                <div class="row row-center center dolar-row">
+            <fieldset class="col-33" style="width:33% !important; " >
+                <button class="dolar dolar1 button-dolar" ng-class="isDisabled1" ng-click="priceRange(1)"  style="width:100% !important;" ><span class="span-dolar">$</span>
+                </button>
+            </fieldset>
+            <fieldset class="col-33" style="width:33% !important;"  >
+                <button class=" dolar dolar2 button-dolar " ng-class="isDisabled2" ng-click="priceRange(2)"  style="width:100% !important;" ><span class="span-dolar">$$</span>
+                </button>
+            </fieldset>
+            <fieldset class="col-33" style="width:33% !important; " >
+                <button class="dolar dolar3 button-dolar" ng-class="isDisabled3" ng-click="priceRange(3)" style="width:100% !important; "><span class="span-dolar">$$$</span>
+                </button>
+            </fieldset>
+        </div>
+    </ion-header-bar>
+<ion-content has-header="true" class="favorites-view" style="margin-top:9px;" scroll="true" lazy-scroll>
+    <br/>
+     <div class="wrapper">
+            <div class="columns"> 
+                <div class="pin" style="width: 100%; margin-left: 0px; padding: 0px; " ng-repeat="rest in favouritesRestaurants | filter:myFilter"><div class="clickable-rest"  ng-click="goRestaurant(rest.objectId)"><!-- alternative: image-lazy-src or ng-src -->
+                    <div class="item-image img-rest"><img img-cache ng-src="{{rest.imageThumbnail.url}}" />
+                    </div>
+                    <div class="item-restaurant dolar{{rest.priceRange}}" >
+                        <div>{{rest.name}}</div> 
+                         <hr class="menu-hr mts-hr">
+                        <span class="item-yel">{{rest.mts}} km</span>
+                    </div>
+</div>
+                </div>
+                
+                
+                
+         </div>
+         
+            <div style="height: 100px;"></div>
+        </div> 
+    </ion-content>
+</ion-view>

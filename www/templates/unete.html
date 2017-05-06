@@ -1,0 +1,45 @@
+<!--<ion-side-menus class="viewZero">
+</ion-side-menus> -->
+<ion-view view-title="{{'joinus' | translate}}" class="unete-view">
+<ion-header-bar align-title="center" class="menu-bar header-res">
+  <div  id="hamburger" class="hamburglar {{isOpen}}" ng-click="open()" >
+
+            <div class="burger-icon">
+                <div class="burger-container">
+                    <span class="burger-bun-top"></span>
+                    <span class="burger-filling"></span>
+                    <span class="burger-bun-bot"></span>
+                </div>
+            </div>
+
+            <div class="path-burger">
+                <div class="animate-path">
+                </div>
+            </div>
+        </div></span>
+  <h1 class="title title-don favorites-title">{{'joinus' | translate}}</h1>
+</ion-header-bar>
+<ion-content has-header="true" scroll="false" ng-controller="UneteCtrl">
+    <hr class="menu-hr margin-hr">
+    <label class="item item-input email-type">
+  <span class="input-label email-label">Email :</span>
+  <input type="email" placeholder="{{'your-mail' | translate}}" onfocus="this.placeholder = ''">
+</label>
+    <div class="list card unete-card" style=" align-content: center;">
+
+   <label class="item-input item-unete-text">
+       <textarea class="unete-textarea" onfocus="this.placeholder = ''" ng-model="input.msg" placeholder="{{'joinus_desc' | translate}}" style="resize: none; " wrap="hard" rows="5" cols="5"></textarea>
+   
+  </label>
+  <div style="width: 90%; margin: 0 auto; text-align: center;">
+  <button href="#" ng-click="sendJoinUs(input.msg)"class="button item violet-unete" ng-disabled="!input.msg || input.msg === ''" type="submit">
+   {{'send' | translate}}
+  </button>
+        </div>
+</div>
+
+       <script>
+    $('input[placeholder], textarea[placeholder]').placeholder();
+</script> 
+  </ion-content>
+</ion-view>

@@ -1,0 +1,31 @@
+<ion-view view-title="LOCATION" class="{{versionClass}}">
+    <ion-header-bar align-title="center" class="location">
+        <div class="buttons">
+            <button class="button button-icon ion-ios-arrow-left location" ng-click="goBack()"></button>
+        </div>
+
+    </ion-header-bar>
+    <div id="map" data-tap-disabled="true"></div>
+    <div style="position: absolute; bottom: 0px; margin: 0 auto; height:66px; width:100% !important; background:-webkit-linear-gradient(RGBA(226, 73, 66, 0) 20%, #E4544F 80%, RGBA(226, 73, 66, 0) 85%); background: linear-gradient(RGBA(226, 73, 66, 0) 20%, #E4544F 80%, RGBA(226, 73, 66, 0) 85%); padding-top: 5px; z-index: 1999;"></div>
+    <ion-footer-bar class="bar footer-location" style="width: 100% !important;">
+        <ion-slide-box on-slide-changed="slideChanged($index)" class="slide-box-location"
+                       style=" width: 100% !important; margin: 0 auto;">
+            <ion-slide ng-repeat="desc in restaurantsLocation" ng-click="locationClick()">
+                <ion-scroll style="height: 100px; margin-top:0px;" direction="y">
+                    <div class="row row-title-location-bottom" style="width: 100% !important;">
+                        <div class="col center" ><span class="title-location">{{desc.name}}</span></div>
+                    </div>
+                    <div class="row row-location">
+                        <div class="col-75 width75 col-description" style="width 75%; !important;">{{desc.address}}
+                        </div>
+                        <div class="col-25 width25 displayInline col-mts paddingAnd" style="{{paddingAnd41}}"><span
+                                ng-if="desc.mts" class="location-number-mts">{{desc.mts}}</span><span ng-if="desc.mts"
+                                                                                                      class="location-mts">KM</span>
+                        </div>
+                    </div>
+                </ion-scroll>
+            </ion-slide>
+        </ion-slide-box>
+    </ion-footer-bar>
+
+</ion-view>

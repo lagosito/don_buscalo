@@ -1,0 +1,96 @@
+<ion-view cache-view="false" view-title="Restaurant" class="restaurant-view">
+    <ion-header-bar align-title="center" class="menu-bar restaurant-bar-view header-res">
+        <div class="buttons">
+            <button class="button button-icon ion-ios-arrow-left white" ng-click="goBack()">
+            </button>
+        </div>
+        <ion-scroll direction="y" style="height:50px; width:80%;"><div class="title-don-restaurant" style="line-height: 50px; height: 50px;">{{restaurant.name}}</div></ion-scroll>
+        <div class="buttons">
+            <button class="button button-icon ion-ios-location-outline white" ng-click="goLocationRestaurantDetail()">
+
+            </button>
+        </div>
+    </ion-header-bar>
+    <!--<ion-header-bar class="bar-subheader restaurant-bar">
+        <hr class="menu-hr">
+        </div>
+    </ion-header-bar>-->
+    <ion-content has-header="true" class="restaurant-detail"  padding="0" scroll="true">
+        <div   style="width: 100%; margin-bottom: 4px;" ><img img-cache ng-src="{{restaurant.imageThumbnail.url}}" style="width: 100% !important; max-height: 300px;"/>
+        <ionic-ratings class="rating-object-top" ratingsobj='ratingsObjectTop'></ionic-ratings>
+        </div>
+         <!-- <ion-slide-box on-slide-changed="slideHasChanged($index)" class="slide-box-restaurtant">
+          <ion-slide ng-repeat="restaurantImage in $root.restaurantImages">
+                <img width="100%" img-cache  ng-src="{{restaurantImage.image.url}}" />
+                <ion-slide>
+                
+            </ion-slide>
+        </ion-slide-box>-->
+
+       <!--- <p ng-if="transEn" class="title-detail-rest"><span ng-repeat="type in restaurant.typeOfFoodRestaurant">{{type}}<span ng-if="$index +1 !== restaurant.typeOfFoodRestaurant.length">,</span> </span></p>
+        <p ng-if="!transEn" class="title-detail-rest"><span ng-repeat="type in restaurant.typeOfFoodRestaurantEsp">{{type}} </span></p> -->
+        <div style=" width: 100%;"><div class="row-detail dolar-white-detail" ng-if="restaurant.priceRange">
+        <span width="40px" class="dolar-white-red" data-ng-repeat="i in range.slice(0,restaurant.priceRange) track by $index">$</span>   
+         </div>
+        <hr class="hr-detail-rest">
+        <p ng-if="trEn" class="description-detail-rest">{{restaurant.descriptionEn}}</p>
+        <p ng-if="!trEn" class="description-detail-rest">{{restaurant.descriptionEsp}}</p>
+        <hr class="hr-detail-rest">
+        <p class="adress-detail-rest address-special">{{restaurant.address}}</p>
+            <p ng-if="trEn" class="adress-detail-rest open-detail-rest"><span ng-bind-html="restaurant.hours"></span></p>
+        <p ng-if="!trEn" class="adress-detail-rest open-detail-rest"><span ng-bind-html="restaurant.hoursEsp"></span></p>
+              
+        </div>
+        <div>  
+        <div class="row row-center">
+            <div class="col col-33">
+                <a class="btn-detail btn-phone" ng-href="tel:{{restaurant.telephone}}"></a>
+            </div>
+            <div class="col col-33">
+                <button class="btn-detail {{btnLove}}" ng-click="btnClickLove()"></button>
+            </div>
+            <div class="col col-33">
+                <button class="btn-detail btn-share"  ng-click="btnClickShare()"></button>
+            </div>
+
+        </div></div>
+        <!--
+        -->
+   
+        <div class="row row-center center">
+            <div ng-if="restaurant.parking" class="col col-20">
+                <div class="btn-detail-small"><img width="100%" src="img/icon/icon-parking-white.png" />
+                </div>
+            </div>
+            <div ng-if="restaurant.typeCreditCards.length > 0" class="col col-20">
+                <div class="btn-detail-small"><img   width="100%" src="img/icon/icon-card-white.png" />
+                </div>
+            </div>
+            <div ng-if="restaurant.isDelivery" class="col col-20">
+                <div class="btn-detail-small"><img   width="100%" src="img/icon/icon-car-white.png" />
+                </div>
+            </div>
+            <div ng-if="restaurant.isWheelchairAccessible" class="col col-20">
+                <div class="btn-detail-small btn-wheel-chair"><img  width="100%" src="img/icon/icon-wheel-chair-white.png" />
+                </div>
+            </div>
+            <div ng-if="restaurant.isInternet" class="col col-20">
+                <div class="btn-detail-small btn-wifi"><img width="100%" src="img/icon/icon-wifi-white.png" />
+                </div>
+            </div>
+         
+        </div>
+        
+         <p class="adress-detail-rest open-detail-rest" ng-click="goToWeb()" >{{restaurant.web}}</p> 
+        
+        <div style=" width: 100%;">
+            <p class="rate-place">{{'rateThisPlace' | translate}}</p>
+            <ionic-ratings ratingsobj='ratingsObject'></ionic-ratings>
+        </div>
+       
+        <ion-infinite-scroll ng-if="canHideArrow" icon="none" on-infinite="hideArrow()" distance="0%"> </ion-infinite-scroll> <div style="height: 100px;"></div>
+        
+    </ion-content>
+     <div ng-if="canShowArrow" style="position: absolute; bottom: 0px; margin: 0 auto; height:60px; width:100%; background:-webkit-linear-gradient(RGBA(226, 73, 66, 0) 5%, #E4544F 80%); background: linear-gradient(RGBA(226, 73, 66, 0) 5%, #E4544F 80%); padding-top: 5px;"><button class="btn-bottom" style=" position: absolute; left: 0; right: 0; margin: 0 auto; margin-top:30px; width:100%; text-align: center;"><img width="20px" align="center" src="img/icon/down-arrow-white.png" />
+        </button></div>
+</ion-view>

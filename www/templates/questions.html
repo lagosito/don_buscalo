@@ -1,0 +1,103 @@
+
+
+<ion-view view-title="" class="questions-view {{versionClass}}" can-swipe-back="false" ><div ng-if="tutorialVisible"><img ng-src="{{languageTutorialImage}}" ng-click="tutorialClicked()" class="tutorial" /></div>
+    <ion-header-bar align-title="left" class="menu-bar" style="background-color: RGBA(230, 83, 75, 1); transition: background-color 200ms ease-in;">
+        <div id="hamburger" class="hamburglar {{isOpen}}" ng-click="open()" >
+
+            <div class="burger-icon">
+                <div class="burger-container">
+                    <span class="burger-bun-top"></span>
+                    <span class="burger-filling"></span>
+                    <span class="burger-bun-bot"></span>
+                </div>
+            </div>
+        </div>
+        <h1 class="title"></h1>
+        <div class="buttons btn-height">
+           <form class="fajna" style=" margin:0px; padding: 0px;" >
+
+                <input id="search-box" type="text" class="search-box" name="q" ng-model="searchText" ngsearchtext="searchMe(searchText)" ng-blur='disableFocus()' ng-focus='searchFocus()' />
+                <input type="submit" id="search-submit" value="Submit" />
+            </form>
+            <label for="search-box">
+                <button class="button button-icon ion-ios-search white"></button>
+            </label>
+            <button ng-click="goLocation()"  class="button button-icon ion-ios-location-outline white">
+
+            </button>
+        </div>
+
+    </ion-header-bar>
+
+    <ion-content on-swipe-right="onSwipeRight()" on-swipe-left="onSwipeLeft()" has-header="true" class="quest-content " style="background-color: RGBA(230, 83, 75, 1); transition: background-color 200ms ease-in;" id="eventPlaceholder" scroll="false" class="{{versionClass}}">
+        <hr class="menu-hr">
+        <script src="js/scroll/jquery-1.11.1.min.js"></script>
+        <div class="{{animate}}">
+            <!--<div class="row row-center" style="height: {{rowWeatherHeight}}px;">
+                <div class="col quest-location-weather-desc">
+                    <ion-spinner class="spinner-energized" ng-hide="hideHello"></ion-spinner>{{answerUsed}}{{answerUsed2}}
+                    <hr class="question-hr">
+                </div>
+
+            </div>-->
+        <div style="
+            /* display: none; */
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            height: 75vh;
+            ">
+            <div class="row center" style="height: {{rowMainHeight}}px; font-size: {{rowMainFontSize}}px;">
+                <div class="col quest-main" style="padding-left: 10px; padding-right: 10px;
+ ">
+                   <ion-spinner class="spinner-energized" ng-hide=quest.nameEn></ion-spinner>
+                   <div ng-if="!trEn">{{quest.nameEsp}}</div>
+                    <div ng-if="trEn"> {{quest.nameEn}}</div>
+
+                </div>
+
+            </div>
+            <hr class="question-hr main" on-swipe-left="swipeLeft()">
+
+            <div class="{{animateButtons}}" style="height: {{rowSelectButtonHeight}}px; opacity: {{opacityButtons}}; transition: opacity 0.15s;">
+            <div style=" width: 100%;">
+                <div ng-if="!quest.hasAnswer" class="row yes-no" style="padding-top: 20px;">
+                    <div class="col-33 center width33">
+                        <button class="quest-btn-click quest-left" style="width: {{btnSize}}px;
+    height: {{btnSize}}px; line-height:{{btnSize}}px; font-size:{{btnFontSize}}px;" ng-click="btnClick('false')">{{'no' | translate}}</button>
+                    </div>
+                    <div class=" col-33 center width33">
+                        <button class="{{hue}} quest-right" style="width: {{btnSize}}px;
+    height: {{btnSize}}px; line-height:{{btnSize}}px; font-size:{{btnFontSize}}px;" ng-click="btnClick('true')">{{'yes' | translate}}</button>
+                    </div>
+                </div>
+
+                <!--ng-model="filterCondition.operator" ng-options="operator.displayName for operator in operators"-->
+                <div ng-show="quest.hasAnswer && !loadingQuestionSelect" class="row select answers" style="padding-top: 0px"><!-- style="padding-bottom: {{paddingSelect}}px;"-->
+                    <div class="col-100 width100 center" compile="settings" >
+                        <select id="question_select">
+                            <option ng-if="!trEn" ng-repeat="operator in quest.Answer.namesEsp" value="{{$index}}">{{operator}}</option>
+                            <option ng-if="trEn" ng-repeat="operator in quest.Answer.namesEn" value="{{$index}}">{{operator}}</option>
+                        </select>
+                        {{test}}
+                    </div>
+                </div>
+                <br/>
+            </div>
+
+</div>
+
+            <div name="demo" class="question-select" id="settings"></div>
+            </div>
+        <div class="row quest-num-loc" style="height: {{rowLocHeight}}px;">
+            <div class="col" ng-click="goPlaces()">
+                <div class="quest-numbers"><ion-spinner class="spinner-energized" ng-hide=restaurantsNumber></ion-spinner>{{restaurantsNumber}}</div>
+                <div class="quest-locations-txt">{{'places' | translate}}</div>
+                <hr class="question-hr">
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

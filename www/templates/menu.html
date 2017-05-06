@@ -1,0 +1,46 @@
+<ion-side-menus style="background-color='RGBA(228, 84, 79, 1)';">
+  <ion-side-menu-content drag-content="false" style="background-color='RGBA(228, 84, 79, 1)';" fade-menu >
+    <!--<ion-nav-bar class="bar-don">
+      <ion-nav-back-button>
+          
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon ion-navicon-round white" menu-toggle="left">
+            
+        </button>
+          
+      </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+        <button class="button button-icon ion-ios-search white"  ng-click="goRestaurants()">
+            
+        </button>
+            <button class="button button-icon ion-ios-location-outline white" menu-toggle="right">
+            
+        </button>
+      </ion-nav-buttons>
+        
+      
+    </ion-nav-bar> --> 
+
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu  side="left" class="menu-don" width="{{deviceWidth}}" >
+    <ion-content scroll="true">
+        <div class="menu-don-list">
+            <div class="logo-black" style="height: {{heightLogo}}em;" ></div>
+      <ion-list>
+        <ion-item class="menu-don-item questions" nav-direction="swap" menu-close ng-click="questions()" ng-href="#/app/qto">{{"newsearch" | translate}}
+        </ion-item>
+        <ion-item  class="menu-don-item favoritos" nav-direction="swap" menu-close ng-click="favorites()"   ng-href="#/app/favorites">{{"favorites" | translate}}
+        </ion-item>
+        <ion-item  class="menu-don-item nosostros"  nav-direction="swap" menu-close ng-click="about()" ng-href="{{'about-html' | translate}}">{{"aboutus" | translate}}
+        </ion-item>
+        <ion-item  class="menu-don-item lang"  nav-direction="swap" menu-close ng-click="language()" ng-href="#/language">{{"language" | translate}}
+        </ion-item>
+      </ion-list>
+        </div>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

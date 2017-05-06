@@ -1,0 +1,8 @@
+/* Empty. Add your own CSS if you like */
+@font-face {
+  font-family: 'big_johnregular';
+  src: url("../fonts/big_john-webfont.eot");
+  src: url("../fonts/big_john-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/big_john-webfont.woff2") format("woff2"), url("../fonts/big_john-webfont.woff") format("woff"), url("..fonts/big_john-webfont.ttf") format("truetype"), url("../fonts/big_john-webfont.svg#big_johnregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

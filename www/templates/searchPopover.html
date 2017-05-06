@@ -1,0 +1,13 @@
+<ion-popover-view class="popoverTop">
+    <div class="bar bar-footer barRestaurant {{versionClass}}">
+        <div class="buttonRestaurant" ng-click="goRestaurantsPopover()">{{"showRestaurants" | translate}}
+        </div>
+        </div>
+        <ion-content class="popoverContent">
+          <div class="list popoverList">
+            <span ng-repeat="item in itemsArr track by $index" class="item popoverItem" ng-click="goRestaurant(item.objectId)">
+              {{item.name}}
+            </span>
+          </div>
+        </ion-content>
+</ion-popover-view>

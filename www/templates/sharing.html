@@ -1,0 +1,16 @@
+<ion-modal-view class="sharing-modal center" style=" background-color: RGBA(228, 84, 79, 1); width: 80%; min-height: 0% !important; height: 380px; left:0;
+right:0; top: 0; bottom: 0;
+margin: auto;">
+<ion-content class="sharing " style="text-align: center;" scroll="false" controller="SharingCtrl">
+    <div class="row" style="margin-top: 5px"></div>
+    <div class="row center sharing-text" style="font-family:'ralewayregular'">{{'sharing-desc-one' | translate}} </br> {{'sharing-desc-two' | translate}} </br>{{restaurant.name}}</div>
+<div class="row" style="margin-top: 5px;"></div>
+    <label class="item-input" >
+    <textarea placeholder="{{'sharing-placeholder' | translate}}" onfocus="this.placeholder = ''"  name="feedback" class="sharing-textarea" ng-model="input.message" style="resize: none; " wrap="hard" rows="3" maxlength="100" ></textarea>
+  </label>
+<div class="row" style="margin-top: 15px;"></div>
+    <div class="row center"><div class="col-30"><button class="sharing-btn ico-fb-btn" ng-click="btnSharingFacebook(input.message)"></button></div><div class="col-30"><button class="sharing-btn ico-twitter-btn" ng-click="btnSharingTwitter(input.message)"></button></div></div>
+    <div class="row center" style="margin-top: 5px;"><div class="col-30"><button class="sharing-btn ico-message-btn" ng-click="btnSharingEmail(input.message)"></button></div><div class="col-30"><button class="sharing-btn ico-whatsapp-btn" ng-click="btnSharingWhatsApp(input.message)"></button></div></div>
+</ion-content>
+
+</ion-modal-view>

@@ -1,0 +1,341 @@
+/* About View 
+
+gray: 
+RGBA(144, 144, 144, 1)
+red RGBA(255, 78, 79, 1)
+
+
+*/
+
+.about-view {
+ background-color: RGBA(144, 144, 144, 1);
+}
+
+.design-red .about-view {
+ background-color: #E24942;  
+}
+
+
+.item-about-text{
+ background-color: black;
+    color: RGBA(237, 237, 237, 1);
+    font-family: 'ralewayregular';
+    font-size: 1.3em;
+    text-align: center;
+
+    box-shadow: none;
+}
+
+.design-red .item-about-text {
+ background-color: #E24942;
+}
+
+label.item.item-input.item-about-text {
+border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+
+label.item.item-input.item-about-text.item-text-wrap {
+  border-color: RGBA(66, 66, 66, 1);
+}
+
+.design-red label.item.item-input.item-about-text.item-text-wrap {
+    
+  width:70%;
+  border-color: white;
+}
+.about-card {
+    padding-top: 0px;
+    margin-top:0px !important;
+    text-align: center;
+    border: none;
+    background-color: RGBA(0, 0, 0, 0);
+    box-shadow: none;
+    border-radius: 0px;
+}
+.design-red .about-card{
+    background-color: #E24942;
+}
+.read-more {
+position: absolute; 
+  bottom: 0; 
+  left: 0;
+  width: 100%; 
+  text-align: center; 
+  margin: 0; padding: 30px 0; 
+	
+  /* "transparent" only works here because == rgba(0,0,0,0) */
+  background-image: linear-gradient(to bottom, transparent, black);
+
+}
+
+.design-red .read-more {
+    
+  background-image: linear-gradient(to bottom, RGBA(226, 73, 66, 0), #E24942);    
+}
+
+.red-about-logo {
+    background-color: RGBA(255, 78, 79, 1);
+    border-color: RGBA(66, 66, 66, 1);
+}
+
+.design-red .red-about-logo{ 
+    background-color: #E24942;
+    border-color: #E24942;
+    padding-top:2px;
+}
+
+
+
+.studio-tigres {
+    background: url(../img/studio-tigres.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height:3em;
+}
+
+.design-red .studio-tigres {
+    background: url(../img/studio.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 4em;
+}
+/* Feedback 
+*/
+.feedback-view {
+background-color: RGBA(246, 198, 112, 1);
+}
+
+.design-red .feedback-view {
+ background-color: #E3544F;   
+}
+.item-feedback-text {
+    height: 200px;
+    background-color: black;
+    margin:0 auto;
+    border: none;
+    box-shadow: none;
+    color: white;
+    width:95% !important;
+    align-content: center;
+    padding-left:5%;
+    border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.design-red .item-feedback-text {
+    height: 75%;
+}
+.email-type {
+    background-color: rgba(255,255,255, 0);
+    width: 90%;
+    margin: 0 auto !important;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: white;
+}
+
+.email-label {
+ color: white;
+text-transform: uppercase;
+font-family: 'ralewaymedium';
+font-size: 1em;
+
+}
+
+input[type="email"]{
+color:white;
+font-family: 'ralewaymedium';
+font-size: 1em;
+    padding-right: 2px !important;
+}
+.design-red .item-feedback-text {
+  background-color: #E3544F;     
+}
+label.item.item-input.item-feedback-text {
+border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.feedback-textarea{ 
+  height: 100%;
+  width:100%;
+
+  background: RGBA(0,0,0,0);
+  color: RGBA(220, 220, 220, 1);
+  margin: 20px;
+  padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 1.1em;
+    text-align: left;
+    line-height: 1.5em;
+    font-family: 'ralewayregular';
+}
+
+
+.design-red .feedback-textarea{
+ background-color: #E3544F;    
+ color:white !important;    
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: white;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: white;
+}
+.button.disabled.item, .button[disabled].item {
+  opacity: 0.7;
+  cursor: default !important;
+  pointer-events: none;
+}
+button.item {
+  border-color: none;
+  margin: 0;
+  padding: 0 12px;
+  width: 100%;
+  vertical-align: top;
+  text-align: center;
+  text-overflow: ellipsis;
+  line-height: 2.3em;
+}
+button.item.green-feedback {
+    color: white;
+    font-size: 2em;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.green-feedback {
+    background-color: RGBA(129, 216, 92, 1);
+    font-family: 'ralewayheavy';
+    border: none;
+}
+
+.design-red button.button.item.green-feedback {
+background-color: rgba(255,255,255,0);
+    border-top: 1px white solid !important;
+    width: 100%;
+    font-size: 2.5em;
+}
+
+
+.feedback-card {
+    border: none;
+    background-color: RGBA(0, 0, 0, 0);
+    box-shadow: none;
+    border-radius: 0px;
+
+}
+
+.design-red .feedback-card {
+    border-color: white;
+  border-style: solid;
+  border-width: 1px;
+        width:90%;
+    height:65%;
+    margin: 0 auto;
+    margin-top:30px;
+}
+.item-input {
+    padding: 0px;
+
+}
+
+/* Unete 
+*/
+.unete-view {
+background-color: RGBA(124, 178, 180, 1);
+}
+
+.design-red .unete-view {
+ background-color: #E3544F;   
+}
+.item-unete-text {
+    height: 200px;
+    background-color: black;
+    border: none;
+    box-shadow: none;
+    color: white;
+    width:95% !important;
+    align-content: center;
+    padding-left:5%;
+    border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.design-red .item-unete-text{
+    height: 75%;
+}
+label.item.item-input.item-unete-text {
+border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.design-red .item-unete-text {
+  background-color: #E3544F;     
+}
+.unete-textarea{ 
+  height: 100%;
+  background: RGBA(0,0,0,0);
+  color: RGBA(220, 220, 220, 1);
+  margin: 20px;
+  padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 1.1em;
+    text-align: center;
+    font-family: 'ralewayregular';
+}
+
+.design-red .unete-textarea{
+ background-color: #E3544F;  
+text-align:left;
+    line-height: 1.6em;
+ color:white !important;    
+}
+button.item.violet-unete {
+    color: white;
+    font-size: 2em;
+    border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+    text-transform: uppercase;
+}
+.violet-unete {
+    background-color: RGBA(174, 127, 214, 1);
+    font-family: 'ralewayheavy';
+    border: none;
+    text-align: center;
+    
+}
+
+
+.design-red button.button.item.violet-unete {
+background-color: rgba(255,255,255,0);
+    border-top: 1px white solid !important;
+    width:100%;
+    margin:0 auto;
+    font-size: 2.5em;
+    
+}
+
+.unete-card {
+    border: none;
+    background-color: RGBA(0, 0, 0, 0);
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+.design-red .unete-card {
+    border-color: white;
+  border-style: solid;
+  border-width: 1px;
+        width:90%;
+    height:65%;
+    margin: 0 auto;
+    margin-top:30px;
+}

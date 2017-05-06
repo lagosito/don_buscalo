@@ -1,0 +1,113 @@
+/* Custom Header */
+
+
+.menu-bar {
+    color: white;
+    height: 60px;
+}
+
+.menu-hr { 
+    width: 95%; 
+    color: white; 
+    background-color: white;
+    border: none;
+    height: 1px;
+}
+
+.margin-hr {
+margin-top: 10px;
+}
+
+
+ion-header-bar.bar-don.bar.bar-header.disable-user-behavior {
+    border-width: 0;
+    border-style: solid;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #ddd;
+}
+
+.bar-header-side {
+    border:none;
+    margin-top: 2em;
+}
+
+.white {
+color: white;
+}
+
+
+/* Menu */
+.menu-don {
+background-color: black;
+}
+
+.design-red .menu-don {
+background-color: #E24942; 
+}
+
+.logo-black {
+    width: 40%;
+    max-width: 50%;
+    height: 13.9em;
+    background: url(../img/logo-white.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.menu-don-list {
+    bottom:0;
+    height: 100%;
+}
+
+.menu-don-item {
+ color: white;
+ font-family: 'ralewayheavy';
+ border: none;
+ background: none;
+ text-align: left;
+ font-size:2.7em;
+ line-height: 1.4em;
+ text-transform: uppercase;
+}
+
+.design-red .menu-don-item {
+ background: none !important;
+ font-family: 'ralewayextralight';
+ text-transform: capitalize;
+ font-size: 1.8em;
+line-height:1.2em;
+ margin-left: 30px;
+word-wrap: break-word;
+
+}
+.favoritos {
+ background-color: RGBA(96, 96, 96, 1);
+}
+
+.design-red .menu-don-item .item-content {
+   padding-top: 13px;
+  padding-bottom: 15px;
+  padding-left: 10px !important;
+  padding-right: 4px !important;
+  white-space: normal;
+ padding-left: 10px !important;
+ padding-right: 4px !important;;
+}
+
+.unete {
+ background-color: RGBA(174, 127, 214, 1);
+}
+
+.nosostros {
+ background-color: RGBA(255, 78, 79, 1);
+}
+
+.feedback {
+ background-color: RGBA(127, 216, 92, 1);
+}
+.lang {
+ background-color: RGBA(114, 122, 184, 1);
+}

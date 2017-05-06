@@ -1,0 +1,312 @@
+/* Restaurant */
+
+$background-red-color: #E4544F;
+
+.restaurant-view {
+background-color: RGBA(255, 204, 102, 1);
+}
+
+.design-red .restaurant-view {
+background-color: $background-red-color;    
+}
+
+.restaurant-bar-view {
+background-color: RGBA(49, 48, 46, 0);
+}
+
+.design-red .restaurant-bar-view {
+background-color: $background-red-color;
+}
+
+.restaurant-bar {
+ height: 5px;
+ background-color: RGBA(49, 48, 46, 0);
+ border: none;
+ padding: 0;
+ background-image: none;
+}
+
+
+.title-don-restaurant {
+    font-family: 'ralewayheavy';
+    color: white;
+    font-size:1.7em;
+    line-height:1em;
+    text-transform: uppercase;
+    .and41 & {
+      font-size: 2.2em;
+        left: 0px;
+        line-height: 1.7em;
+        margin: 0px;
+        right: 0px;
+    }
+}
+
+.restaurant-detail {
+ top: 60px;
+}
+.design-red .restaurant-bar {
+background-color: $background-red-color;  
+}
+
+.dolar-white-red {
+    font-family: 'ralewaymedium';
+  font-size:1.4em;
+    color:white;
+    margin:15px;
+}
+
+.dolar-white-detail {
+    padding-top: 7px;
+}
+
+ion-content.content-restaurant.scroll-content.ionic-scroll.has-subheader {
+top: -1px;
+}
+
+
+.slide-box-restaurtant .slider-pager {
+bottom: 45px;
+color: white;
+}
+
+.slide-box-restaurtant .slider-pager .slider-pager-page {
+color: white;
+}
+.title-rest {
+    font-family: 'ralewayheavy';
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-transform: uppercase;
+    line-height: 1.8em;
+    font-size: 1.8em !important;
+    margin-top: 10px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+    
+}
+
+
+.hr-detail-rest { 
+    width: 80%; 
+    color: RGBA(165, 120, 35, 1); 
+    background-color: RGBA(165, 120, 35, 1);
+    border: none;
+    height: 1px;
+}
+
+.design-red .hr-detail-rest {
+    color: RGBA(228, 84, 79, 1); 
+    background-color: RGBA(228, 84, 79, 1);
+    border: none;
+   border-bottom: 1px RGBA(255,255,255,0.5) solid;
+}
+
+.title-detail-rest {
+    width: 80%;
+    margin: 0 auto;
+    
+    text-align: center;
+    font-family: 'ralewayheavy';
+    line-height: 1em;
+    font-size: 1.4em;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+
+.description-detail-rest {
+    width: 93%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'ralewaymedium';
+    line-height: 1.4em;
+    font-size:1em;
+    color: RGBA(15, 1, 0, 1);
+}
+
+
+.design-red .description-detail-rest {
+    color: white;
+    font-size: 1.2em;
+}
+.adress-detail-rest {
+    font-family: 'ralewaymedium';
+    line-height: 1.2em;
+    font-size:1em;
+    color: RGBA(109, 96, 75, 1);
+    margin: 0 auto;
+    
+}
+
+.design-red .adress-detail-rest{
+    font-family: 'ralewayregular';
+    color: white;
+    line-height: 1.4em;
+    font-size: 1.3em;
+}
+
+.address-special {
+    width: 80%;
+}
+
+.phone-detail-rest {
+     font-family: 'ralewayheavy';
+    color: white;
+    margin: 0 auto;
+    font-size: 2.2em;
+    line-height: 1em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    
+}
+
+.phone-detail-rest a { 
+    color: white;
+}
+.open-detail-rest {
+width: 95%;
+margin-top: 10px;
+font-size:1.2em !important;
+margin-bottom: 15px;
+}
+
+.row-detail {
+    margin: 0 auto;
+}
+button.btn-detail {
+    width: 68px;
+    height:68px;
+    border: none;
+    background: none;
+    margin:0 auto;
+  &.active,
+  &.activated {
+      opacity:0.3;
+  }
+}
+
+button.btn-bottom {
+height: 30px;
+border: none;
+background: none;
+margin: 0 auto;
+}
+
+.btn-detail-small {
+     width: 32px;
+    border: none;
+    background: none;
+    margin:0 auto;
+  &.active,
+  &.activated {
+      opacity:0.3;
+  }
+}
+
+button.btn-detail.btn-wheel-chair {
+    width: 30px;
+    height: 30px;
+}
+
+button.btn-detail.btn-taxi {
+  background: url(../img/icon/icon-taxi-white.png);
+        background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+button.btn-detail.btn-love {
+  background: url(../img/icon/icon-heart-white.png);
+        background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+button.btn-detail.btn-love-selected {
+  background: url(../img/icon/icon-heart-selected-white.png);
+        background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+button.btn-detail.btn-share {
+  background: url(../img/icon/icon-share-white.png);
+        background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+button.btn-detail.btn-phone {
+  background: url(../img/icon/icon-phone.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+a.btn-detail.btn-phone {
+  background: url(../img/icon/icon-phone.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+a.btn-detail {
+  display: inline-block;
+  width: 68px;
+  height:68px;
+  border: none;
+  background: none;
+  margin:0 auto;
+  &.active,
+  &.activated {
+    opacity:0.3;
+  }
+}
+
+.ionic_ratings .icon {
+    font-size: 1.8em;
+    margin-left:3px;
+    margin-right:3px;
+}
+
+.ionic_ratings .icon_restaurants {
+    font-size: 1.2em;
+    margin-left:1px;
+    margin-right:1px;
+}
+
+.ionic_ratings {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.rating-object-top {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: -45px;
+}
+
+.rate-place {
+    font-family: 'ralewayheavy';
+    line-height: 1.2em;
+    font-size:1.4em;
+    color: RGBA(255, 255, 255, 1);
+    margin: 0 auto;
+    margin-bottom:10px;
+}
+
+.ionic_ratings .read_only {
+    pointer-events:none !important;
+}
